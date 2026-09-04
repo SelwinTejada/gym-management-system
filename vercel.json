@@ -1,6 +1,5 @@
 {
-  "now": {
-    "framework": "now-php",
-    "version": "1.0.0"
-  }
+  "redirects": [
+    { "source": "/(.*)", "destination": "/index.php", "statusCode": 200 }
+  ]
 }
