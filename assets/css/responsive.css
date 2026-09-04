@@ -1,0 +1,207 @@
+/**
+ * Responsive Styles
+ * Gym Management System
+ * 
+ * File: assets/css/responsive.css
+ * Purpose: Mobile and tablet responsive adjustments
+ */
+
+/* ============================================
+   TABLET ADJUSTMENTS
+   ============================================ */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+    
+    .navbar-title {
+        font-size: 18px;
+    }
+    
+    .stat-card {
+        padding: 16px 20px;
+    }
+    
+    .stat-content h2 {
+        font-size: 24px;
+    }
+    
+    .modern-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .table-responsive {
+        font-size: 13px;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 8px 12px;
+    }
+    
+    .btn {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    
+    .form-control {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+    
+    /* Tablet: Remove sidebar margin from main content */
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* ============================================
+   MOBILE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        max-width: 320px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1001;
+    }
+    
+    .navbar {
+        padding: 0 12px;
+        height: 60px;
+    }
+    
+    .navbar-title {
+        font-size: 16px;
+    }
+    
+    .content-wrapper {
+        padding: 12px;
+    }
+    
+    .quick-action-btn {
+        padding: 12px 8px;
+    }
+    
+    .quick-action-btn i {
+        font-size: 22px;
+    }
+    
+    .quick-action-btn span {
+        font-size: 12px;
+    }
+    
+    .stat-card {
+        padding: 14px 16px;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .stat-content h2 {
+        font-size: 20px;
+    }
+    
+    .stat-content h5 {
+        font-size: 12px;
+    }
+    
+    .modern-card .card-body {
+        padding: 12px;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .toast {
+        min-width: 250px;
+        font-size: 13px;
+    }
+    
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-content {
+        border-radius: var(--radius-md);
+    }
+    
+    .form-label {
+        font-size: 13px;
+    }
+    
+    /* Mobile: Remove sidebar margin from main content */
+    .main-content {
+        margin-left: 0 !important;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .sidebar,
+    .navbar,
+    .quick-actions,
+    .btn {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    .content-wrapper {
+        padding: 0 !important;
+    }
+    
+    .card {
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+    }
+    
+    body {
+        background: #FFFFFF !important;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .stat-card,
+    .modern-card {
+        border-width: 2px;
+    }
+    
+    .badge {
+        border: 1px solid currentColor;
+    }
+}
