@@ -6,6 +6,6 @@
     }
   },
   "redirects": [
-    { "source": "/(.*)", "destination": "/index.php", "status": 200, "force": true }
+    { "source": "/(.*)", "destination": "/index.php", "statusCode": 200 }
   ]
 }
