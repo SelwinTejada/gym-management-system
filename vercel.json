@@ -1,11 +1,6 @@
 {
-  "framework": "express",
-  "functions": {
-    "api/**": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "redirects": [
-    { "source": "/(.*)", "destination": "/index.php", "statusCode": 200 }
-  ]
+  "now": {
+    "framework": "now-php",
+    "version": "1.0.0"
+  }
 }
