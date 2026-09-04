@@ -1,5 +1,10 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.php" }
+    { "source": "/*", "destination": "/index.php", "statusCode": 200 }
+  ],
+  "headers": [
+    { "source": "/*", "headers": [
+      { "key": "Content-Type", "value": "text/html" }
+    ]}
   ]
 }
