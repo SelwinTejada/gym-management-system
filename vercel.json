@@ -1,10 +1,11 @@
 {
-  "rewrites": [
-    { "source": "/*", "destination": "/index.php", "statusCode": 200 }
-  ],
-  "headers": [
-    { "source": "/*", "headers": [
-      { "key": "Content-Type", "value": "text/html" }
-    ]}
+  "framework": "express",
+  "functions": {
+    "api/**": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "redirects": [
+    { "source": "/(.*)", "destination": "/index.php", "status": 200, "force": true }
   ]
 }
